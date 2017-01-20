@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In  -->
+
+<svg
+   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="24px"
+   height="24px"
+   viewBox="-3 0 24 24"
+   style="overflow:visible;enable-background:new -3 0 24 24;"
+   xml:space="preserve"
+   preserveAspectRatio="xMinYMid meet"
+   id="svg2"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="icon.svg"><metadata
+   id="metadata55"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1578"
+   inkscape:window-height="855"
+   id="namedview53"
+   showgrid="false"
+   inkscape:zoom="9.8333333"
+   inkscape:cx="12"
+   inkscape:cy="12"
+   inkscape:window-x="2044"
+   inkscape:window-y="84"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg2" />
+<defs
+   id="defs4">
+</defs>
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="9.4995003"
+   y1="0"
+   x2="9.4995003"
+   y2="24.0005">
+	<stop
+   offset="0"
+   style="stop-color:#f9bc45;stop-opacity:1;"
+   id="stop7" />
+	<stop
+   offset="0.55690002"
+   style="stop-color:#f5a508;stop-opacity:1;"
+   id="stop9" />
+	<stop
+   offset="1"
+   style="stop-color:#8e6005;stop-opacity:1;"
+   id="stop11" />
+	<a:midPointStop
+   offset="0"
+   style="stop-color:#95BFF8" />
+	<a:midPointStop
+   offset="0.4"
+   style="stop-color:#95BFF8" />
+	<a:midPointStop
+   offset="1"
+   style="stop-color:#7CA4EB" />
+</linearGradient>
+<polygon
+   style="fill:url(#SVGID_1_);fill-opacity:1.0"
+   points="11.5,0 0,0 0,24 19,24 19,7.9 "
+   id="polygon13" />
+<linearGradient
+   id="SVGID_2_"
+   gradientUnits="userSpaceOnUse"
+   x1="9.4995"
+   y1="1"
+   x2="9.4995"
+   y2="23.0005">
+	<stop
+   offset="0"
+   style="stop-color:#fcdda1;stop-opacity:1;"
+   id="stop16" />
+	<stop
+   offset="1"
+   style="stop-color:#fef2db;stop-opacity:1;"
+   id="stop18" />
+	<a:midPointStop
+   offset="0"
+   style="stop-color:#E7F4FC" />
+	<a:midPointStop
+   offset="0.5"
+   style="stop-color:#E7F4FC" />
+	<a:midPointStop
+   offset="1"
+   style="stop-color:#DEEFFC" />
+</linearGradient>
+<polygon
+   style="fill:url(#SVGID_2_);"
+   points="1,23 1,1 11.1,1 18,8.3 18,23 "
+   id="polygon20" />
+<linearGradient
+   id="SVGID_3_"
+   gradientUnits="userSpaceOnUse"
+   x1="9.4995"
+   y1="2"
+   x2="9.4995"
+   y2="22.0005">
+	<stop
+   offset="0"
+   style="stop-color:#f9bc45;stop-opacity:1;"
+   id="stop23" />
+	<stop
+   offset="1"
+   style="stop-color:#d68f07;stop-opacity:1;"
+   id="stop25" />
+	<a:midPointStop
+   offset="0"
+   style="stop-color:#CEE9F9" />
+	<a:midPointStop
+   offset="0.5"
+   style="stop-color:#CEE9F9" />
+	<a:midPointStop
+   offset="1"
+   style="stop-color:#BBDFF8" />
+</linearGradient>
+<polygon
+   style="fill:url(#SVGID_3_);"
+   points="2,22 2,2 10.6,2 17,8.7 17,22 "
+   id="polygon27" />
+<linearGradient
+   id="SVGID_4_"
+   gradientUnits="userSpaceOnUse"
+   x1="14.2451"
+   y1="0"
+   x2="14.2451"
+   y2="9.3593998"
+   xlink:href="#SVGID_1_">
+	<stop
+   offset="0"
+   style="stop-color:#936305;stop-opacity:1;"
+   id="stop30" />
+	<stop
+   offset="0.55690002"
+   style="stop-color:#6f4b04;stop-opacity:1;"
+   id="stop32" />
+	<stop
+   offset="1"
+   style="stop-color:#cd8a07;stop-opacity:1;"
+   id="stop34" />
+	<a:midPointStop
+   offset="0"
+   style="stop-color:#95BFF8" />
+	<a:midPointStop
+   offset="0.4"
+   style="stop-color:#95BFF8" />
+	<a:midPointStop
+   offset="1"
+   style="stop-color:#7CA4EB" />
+</linearGradient>
+<path
+   style="fill:url(#SVGID_4_);fill-opacity:1.0"
+   d="M10,9c0,0,5.2-1.5,9,0.4c0-0.1,0-1.5,0-1.5L11.5,0c0,0-1.8,0-2,0C12.1,3.7,10,9,10,9z"
+   id="path36" />
+<linearGradient
+   id="SVGID_5_"
+   gradientUnits="userSpaceOnUse"
+   x1="11.3223"
+   y1="7.5449"
+   x2="14.4504"
+   y2="4.4168">
+	<stop
+   offset="0"
+   style="stop-color:#fcda99;stop-opacity:1;"
+   id="stop39" />
+	<stop
+   offset="0.51810002"
+   style="stop-color:#fcda99;stop-opacity:1;"
+   id="stop41" />
+	<stop
+   offset="0.70450002"
+   style="stop-color:#fcda99;stop-opacity:1;"
+   id="stop43" />
+	<stop
+   offset="0.83710003"
+   style="stop-color:#fcda99;stop-opacity:1;"
+   id="stop45" />
+	<stop
+   offset="0.87199998"
+   style="stop-color:#fcda99;stop-opacity:1;"
+   id="stop47" />
+	<stop
+   offset="1"
+   style="stop-color:#fcda99;stop-opacity:1;"
+   id="stop49" />
+	<a:midPointStop
+   offset="0"
+   style="stop-color:#E7F4FC" />
+	<a:midPointStop
+   offset="0.87"
+   style="stop-color:#E7F4FC" />
+	<a:midPointStop
+   offset="0.872"
+   style="stop-color:#CEE9F9" />
+	<a:midPointStop
+   offset="0.5"
+   style="stop-color:#CEE9F9" />
+	<a:midPointStop
+   offset="1"
+   style="stop-color:#BDD8F0" />
+</linearGradient>
+<path
+   style="fill:url(#SVGID_5_);"
+   d="M17.5,7.8c-0.9-0.2-2-0.3-3.1-0.3c-1.1,0-2.1,0.1-3,0.3c0.4-1.6,0.7-4.1-0.2-6.4L17.5,7.8z"
+   id="path51" />
+</svg>
