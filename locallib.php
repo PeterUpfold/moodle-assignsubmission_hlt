@@ -65,22 +65,22 @@ class assign_submission_hlt extends assign_submission_plugin {
 
 		$set_date_event->id = $DB->get_field('event', 'id', $params);
 		
-		//var_dump($data);die();
 
-		$set_date_event->name         = get_string('setdatename', 'assignsubmission_hlt');
+		$set_date_event->name         = get_string('setdatename', 'assignsubmission_hlt') . ' ' . $this->assignment->get_instance()->name;
 		$set_date_event->description  = get_string('setdatedescription', 'assignsubmission_hlt');
 		$set_date_event->courseid     = $data->course;
 		$set_date_event->groupid      = 0;
 		$set_date_event->userid       = $USER->id;
 		$set_date_event->modulename   = 'assign';
-		$set_date_event->instance     = $data->instance;
+		$set_date_event->instance     = $this->assignment->get_instance()->id;
 		$set_date_event->eventtype    = 'hlt_setdate';
+		$set_date_event->icon         = 'hlt_setdate';
 		$set_date_event->timestart    = $data->allowsubmissionsfromdate;
 		$set_date_event->visible      = true;
 		$set_date_event->timeduration = 0;
 
-		// if id is not equatable to false, it is an existing event to update.
-		if ( $set_date_event->id ) {
+		// if id is not bool false, it is an existing event to update.
+		if ( $set_date_event->id !== false ) {
 			$cal_set_date_event = calendar_event::load($set_date_event->id);
 			$cal_set_date_event->update($set_date_event);
 		}
@@ -88,6 +88,27 @@ class assign_submission_hlt extends assign_submission_plugin {
 			unset($set_date_event->id);
 			calendar_event::create($set_date_event);
 		}
+
+		/*// update the standard event to include our prefix "HLT Due:"
+		$due_date_event = new stdClass();
+
+		// see if a set date already exists in the DB, and populate the id property if so
+		$params = array(
+			'modulename' => 'assign',
+			'instance'   => $data->instance,
+			'eventtype'  => 'due'
+		);		
+		
+		// update the due event to include the HLT Due: prefix
+		$due_date_event->id = $DB->get_field('event', 'id', $params);
+
+
+		if ($due_date_event !== false) {
+			$cal_due_date_event = calendar_event::load($due_date_event->id);
+			
+			$due_date_event->name = get_string('duedatename', 'assignsubmission_hlt') . ' ' . $this->assignment->get_instance()->name;
+			$cal_due_date_event->update($due_date_event);
+		}*/
 
 		return true;
 	}

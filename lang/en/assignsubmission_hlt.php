@@ -30,4 +30,5 @@ $string['enabled'] = 'HLT submissions';
 $string['enabled_help'] = 'If enabled, this is considered a Home Learning Task and appropriate events will appear in pupils&rsquo; calendars.';
 $string['pluginname'] = 'HLT Submissions';
 $string['setdatename'] = 'HLT Set: ';
+$string['duedatename'] = 'HLT Due: ';
 $string['setdatedescription'] = 'The date on which this HLT was set.';
