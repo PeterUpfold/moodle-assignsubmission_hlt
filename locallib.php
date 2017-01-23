@@ -89,10 +89,10 @@ class assign_submission_hlt extends assign_submission_plugin {
 			calendar_event::create($set_date_event);
 		}
 
-		/*// update the standard event to include our prefix "HLT Due:"
+		// update the standard event to include our prefix "HLT Due:"
 		$due_date_event = new stdClass();
 
-		// see if a set date already exists in the DB, and populate the id property if so
+		// see if a due date already exists in the DB, and populate the id property if so
 		$params = array(
 			'modulename' => 'assign',
 			'instance'   => $data->instance,
@@ -101,16 +101,38 @@ class assign_submission_hlt extends assign_submission_plugin {
 		
 		// update the due event to include the HLT Due: prefix
 		$due_date_event->id = $DB->get_field('event', 'id', $params);
+		$due_date_event->name = get_string('duedatename', 'assignsubmission_hlt') . ' ' . $this->assignment->get_instance()->name;
 
-
-		if ($due_date_event !== false) {
+		if ($due_date_event->id !== false) {
 			$cal_due_date_event = calendar_event::load($due_date_event->id);
-			
-			$due_date_event->name = get_string('duedatename', 'assignsubmission_hlt') . ' ' . $this->assignment->get_instance()->name;
 			$cal_due_date_event->update($due_date_event);
-		}*/
+		}
+		else {
+			unset($due_date_event->id);
+			$due_date_event->eventtype = 'due';
+			$due_date_event->courseid     = $data->course;
+			$due_date_event->groupid      = 0;
+			$due_date_event->userid       = $USER->id;
+			$due_date_event->modulename   = 'assign';
+			$due_date_event->instance     = $this->assignment->get_instance()->id;
+			$due_date_event->icon         = 'hlt_setdate';
+			$due_date_event->timestart    = $data->duedate;
+			$due_date_event->visible      = true;
+			$due_date_event->timeduration = 0;
+
+			$cal_due_date_event = calendar_event::create($due_date_event);
+		}
 
 		return true;
+	}
+
+
+	/** 
+	 * This plugin has no submission component (like 'comments' plugin), so should not be counted
+	 * when determining whether to show the edit submission link.
+	 */
+	public function allow_submissions() {
+		return false;
 	}
 	
 
