@@ -1,10 +1,9 @@
 Moodle Assignment Submission Module: HLT
 ========================================
 
-A submission plugin for the Moodle assignment module that allows us to set a "set date" and "due date" calendar event in the student's calendar. 
+A submission plugin for the Moodle Assignment module that allows us to set a "set date" and "due date" calendar event in the student's calendar. 
 
-Currently unstable and untested.
-
+As long as the "HLT" submission method is ticked when the Assignment is created, this plugin is able to add an extra "Set Date" event in the student calendar. This event is automatically updated whenever the Assignment is updated.
 
 ## Reference
 
