@@ -123,6 +123,29 @@ class assign_submission_hlt extends assign_submission_plugin {
 			$cal_due_date_event = calendar_event::create($due_date_event);
 		}
 
+		// update intro to include set date
+		$update_assign = new \stdClass();
+		$update_assign->id = $this->assignment->get_instance()->id;
+
+		// replace existing set date/due date div in intro
+		if (strpos($this->assignment->get_instance()->intro, '<div class="assignsubmission_hlt_metadata">') !== false) {
+			$update_assign->intro = preg_replace('/<div class="assignsubmission_hlt_metadata">.*<\/div>/U', '', $this->assignment->get_instance()->intro);
+		}
+		else {
+			$update_assign->intro = $this->assignment->get_instance()->intro;
+		}
+
+		$update_assign->intro .=
+			'<br/><div class="assignsubmission_hlt_metadata"><p><strong>' . get_string('setdatename', 'assignsubmission_hlt') . '</strong>' .
+			\userdate($data->allowsubmissionsfromdate, get_string('strftimedate', 'langconfig')) .
+			'</p>' .
+			'<p><strong>' . get_string('duedatename', 'assignsubmission_hlt') . '</strong>' .
+			\userdate($data->duedate, get_string('strftimedate', 'langconfig')) .
+			'</p></div>';
+
+		$DB->update_record('assign', $update_assign);
+
+
 		return true;
 	}
 
@@ -134,6 +157,6 @@ class assign_submission_hlt extends assign_submission_plugin {
 	public function allow_submissions() {
 		return false;
 	}
-	
+
 
 };
