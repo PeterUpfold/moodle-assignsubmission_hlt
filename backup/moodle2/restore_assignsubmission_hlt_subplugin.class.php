@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class restore_assignsubmission_hlt_subplugin extends backup_subplugin {
+class restore_assignsubmission_hlt_subplugin extends restore_subplugin {
 
 	/**
 	 * Returns the paths to be handled by the subplugin at workshop level
@@ -48,6 +48,15 @@ class restore_assignsubmission_hlt_subplugin extends backup_subplugin {
 		$paths[] = new restore_path_element($elename, $elepath);
 
 		return $paths;
+	}
+
+	/**
+	 * Stub to process the null restore (events should come back)
+	 * @param mixed data
+	 * @return void
+	 */
+	public function process_assignsubmission_hlt_submission($data) {
+		return;
 	}
 
 };

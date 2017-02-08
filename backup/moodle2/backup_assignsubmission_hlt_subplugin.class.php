@@ -43,7 +43,6 @@ class backup_assignsubmission_hlt_subplugin extends backup_subplugin {
 		$subpluginwrapper = new backup_nested_element($this->get_recommended_name());
 
 		$subplugin->add_child($subpluginwrapper);
-		$subpluginwrapper->add_child($subpluginelement);
 
 		return $subplugin;
 	}

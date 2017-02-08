@@ -23,6 +23,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version           = 2017012004;
+$plugin->version           = 2017020800;
 $plugin->requires          = 2016112900;
 $plugin->component         = 'assignsubmission_hlt';
