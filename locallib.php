@@ -47,7 +47,16 @@ class assign_submission_hlt extends assign_submission_plugin {
 	 * @param stdClass data
 	 * @return bool
 	 */
-	public function save_settings(stdClass $data) {
+	public function save_settings(stdClass &$data) {
+				/**
+				 * OK, so I'm being very naughty here by violating E_STRICT and passing $data by reference to this method.
+				 * Why? Well, I'm modifying the 'intro' of the assign to include the set and due dates. I want to do it this way
+				 * so that they appear inline in the course view if "display description on course page" is ticked.
+				 *
+				 * However, if I cannot modify the 'intro' parameter in the form data here such that it affects Core,
+				 * the original 'intro' will overwrite what I do here. This is caused by modlib.php:add_moduleinfo() and 
+				 * only affects the creation of a new assign. Editing an existing assign doesn't require this hack.
+				 */
 
 		global $USER, $DB;
 
@@ -127,6 +136,7 @@ class assign_submission_hlt extends assign_submission_plugin {
 		$update_assign = new \stdClass();
 		$update_assign->id = $this->assignment->get_instance()->id;
 
+
 		// replace existing set date/due date div in intro
 		if (strpos($this->assignment->get_instance()->intro, '<div class="assignsubmission_hlt_metadata">') !== false) {
 			$update_assign->intro = preg_replace('/<div class="assignsubmission_hlt_metadata">.*<\/div>/U', '', $this->assignment->get_instance()->intro);
@@ -143,6 +153,8 @@ class assign_submission_hlt extends assign_submission_plugin {
 			\userdate($data->duedate, get_string('strftimedate', 'langconfig')) .
 			'</p></div>';
 
+		$data->intro = $update_assign->intro; // allow the new intro to bubble back up (see note at the beginning of this method)
+
 		$DB->update_record('assign', $update_assign);
 
 
@@ -156,6 +168,14 @@ class assign_submission_hlt extends assign_submission_plugin {
 	 */
 	public function allow_submissions() {
 		return false;
+	}
+	
+	/**
+	 * Render an introductory section which is displayed right below the activity's "intro" section on the main
+	 * assignment page.
+	 */
+	public function view_header() {
+		return '';
 	}
 
 
