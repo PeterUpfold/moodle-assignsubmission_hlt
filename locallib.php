@@ -23,6 +23,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot . '/calendar/lib.php');
+
 /**
  * Library class for HLT submission plugin
  *
@@ -85,6 +87,7 @@ class assign_submission_hlt extends assign_submission_plugin {
 		$set_date_event->eventtype    = 'hlt_setdate';
 		$set_date_event->icon         = 'hlt_setdate';
 		$set_date_event->timestart    = $data->allowsubmissionsfromdate;
+		$set_date_event->timesort     = $data->allowsubmissionsfromdate;
 		$set_date_event->visible      = true;
 		$set_date_event->timeduration = 0;
 
