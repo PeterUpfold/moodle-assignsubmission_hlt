@@ -31,4 +31,5 @@ $string['enabled_help'] = 'If enabled, this is considered a Home Learning Task a
 $string['pluginname'] = 'HLT Submissions';
 $string['setdatename'] = 'HLT Set: ';
 $string['duedatename'] = 'HLT Due: ';
+$string['hltsetdatemustnotbeinpast'] = 'The HLT Set date cannot be in the past.';
 $string['setdatedescription'] = 'The date on which this HLT was set.';

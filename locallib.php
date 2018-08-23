@@ -44,6 +44,24 @@ class assign_submission_hlt extends assign_submission_plugin {
 
 
 	/**
+	 * Called when building the submission form, allowing us to inject additional checks
+	 * into the form.
+	 */
+	public function get_settings(MoodleQuickForm $mform) {
+		$mform->registerRule('assignsubmission_hlt_setdate_in_past', 'callback', function($data) {
+			if (!is_array($data)) {
+				return false;
+			}
+			if (!array_key_exists('day', $data) || !array_key_exists('month', $data) || !array_key_exists('year', $data)) {
+				return false;
+			}
+			$date = new \DateTime( $data['year'] . '-' . $data['month'] . '-' . $data['day'] );
+			return !($date < new \DateTime());
+		});
+		$mform->addRule('allowsubmissionsfromdate', get_string( 'hltsetdatemustnotbeinpast', 'assignsubmission_hlt' ), 'assignsubmission_hlt_setdate_in_past', false, false);
+	}
+
+	/**
 	 * Saves the settings for this submission plugin -- this is when events should
 	 * be hooked up.
 	 * @param stdClass data
